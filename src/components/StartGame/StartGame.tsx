@@ -16,16 +16,16 @@ export const StartGame = ({
     <div className={styles.box}>
       <h2 className={styles.title}>Connect Four!</h2>
       <div>
-        <input value={gameId} onChange={handleChange}></input>
-        <button onClick={() => joinGame(gameId)}>Join Existing Game</button>
+        <input className={styles.input} value={gameId} onChange={handleChange}></input>
+        <button className ={styles.submitButton} onClick={() => joinGame(gameId)}>Join Existing Game</button>
       </div>
       <div>
-        <button className={styles.fullWidth} onClick={startLocalGame}>
+        <button className={styles.submitButton} onClick={startLocalGame}>
           Start Local co-op Game
         </button>
       </div>
       <div>
-        <button className={styles.fullWidth} onClick={startMultiplayerGame}>
+        <button className={styles.submitButton} onClick={startMultiplayerGame}>
           Start Multiplayer Game
         </button>
       </div>

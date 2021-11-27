@@ -37,17 +37,7 @@ export interface Game {
   playerCount: number;
 }
 
-function getApiUrl(location: Location): string {
-  if (location.port === "3000") {
-    // development
-    return `http://localhost:5000`;
-  } else {
-    // kubernetes
-    return `https://${location.host.replace("connect4.", "connect4-server.")}`;
-  }
-}
-
-const API_URL = getApiUrl(window.location);
+const API_URL = "https://connect4.dreamteam.hgopteam.com";
 
 export class GameApiClient {
   createGame(body: CreateGame): Promise<Game> {

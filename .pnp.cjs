@@ -35,7 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@types/node", "npm:16.11.9"],
+            ["@types/node", "npm:16.11.10"],
             ["@types/react", "npm:17.0.35"],
             ["@yarnpkg/pnpify", "npm:3.1.1-rc.4"],
             ["classnames", "npm:2.3.1"],
@@ -606,6 +606,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-13.13.52-95159539bb-8f1afff497.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:13.13.52"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:16.11.10", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.10-6a434088fa-9c79419c5c.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:16.11.10"]
           ],
           "linkType": "HARD",
         }],
@@ -1783,7 +1790,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["connect4-client", "workspace:."],
-            ["@types/node", "npm:16.11.9"],
+            ["@types/node", "npm:16.11.10"],
             ["@types/react", "npm:17.0.35"],
             ["@yarnpkg/pnpify", "npm:3.1.1-rc.4"],
             ["classnames", "npm:2.3.1"],

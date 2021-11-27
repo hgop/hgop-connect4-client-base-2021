@@ -3,7 +3,7 @@
     "**/.yarn": true,
     "**/.pnp.*": true
   },
-  "eslint.nodePath": "connect4-client/.yarn/sdks",
-  "typescript.tsdk": "connect4-client/.yarn/sdks/typescript/lib",
+  "eslint.nodePath": ".yarn/sdks",
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true
 }

@@ -37,7 +37,7 @@ export interface Game {
   playerCount: number;
 }
 
-const API_URL = "https://connect4.dreamteam.hgopteam.com";
+const API_URL = process.env.NEXT_API_URL
 
 export class GameApiClient {
   createGame(body: CreateGame): Promise<Game> {

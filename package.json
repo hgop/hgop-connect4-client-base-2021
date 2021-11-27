@@ -14,7 +14,7 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/node": "16.11.9",
+    "@types/node": "16.11.10",
     "@types/react": "17.0.35",
     "@yarnpkg/pnpify": "^3.1.1-rc.4",
     "eslint": "7",

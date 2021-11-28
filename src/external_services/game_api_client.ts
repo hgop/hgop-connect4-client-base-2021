@@ -37,11 +37,15 @@ export interface Game {
   playerCount: number;
 }
 
-const API_URL = process.env.NEXT_API_URL
-
 export class GameApiClient {
+  API_URL: string;
+
+  constructor(API_URL: string) {
+    this.API_URL = API_URL;
+  }
+
   createGame(body: CreateGame): Promise<Game> {
-    return fetch(API_URL + "/create_game", {
+    return fetch(this.API_URL + "/create_game", {
       method: "post",
       headers: {
         Accept: "application/json",
@@ -55,7 +59,7 @@ export class GameApiClient {
   }
 
   joinGame(body: JoinGame): Promise<Game> {
-    return fetch(API_URL + "/join_game", {
+    return fetch(this.API_URL + "/join_game", {
       method: "post",
       headers: {
         Accept: "application/json",
@@ -69,7 +73,7 @@ export class GameApiClient {
   }
 
   getGame(body: GetGame): Promise<Game> {
-    const url = new URL(API_URL + "/get_game");
+    const url = new URL(this.API_URL + "/get_game");
     url.search = new URLSearchParams({
       gameId: body.gameId,
       playerId: body.playerId,
@@ -84,7 +88,7 @@ export class GameApiClient {
   }
 
   makeMove(body: MakeMove): Promise<Game> {
-    return fetch(API_URL + "/make_move", {
+    return fetch(this.API_URL + "/make_move", {
       method: "post",
       headers: {
         Accept: "application/json",
@@ -174,6 +178,11 @@ const mockGame = (empty: boolean): Promise<Game> => {
 };
 
 export class MockGameClient {
+  API_URL: string;
+
+  constructor(API_URL: string) {
+    this.API_URL = API_URL;
+  }
   createGame(_body: CreateGame): Promise<Game> {
     return mockGame(true);
   }
